@@ -3,14 +3,24 @@ package com.zambiazzi.moviecatalogservice.models;
 import java.util.List;
 
 public class UserRating {
+	private String userId;
 	private List<Rating> ratings;
 
 	public UserRating() {
 	}
 
-	public UserRating(List<Rating> ratings) {
+	public UserRating(String userId, List<Rating> ratings) {
 		super();
+		this.userId = userId;
 		this.ratings = ratings;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public List<Rating> getRatings() {
